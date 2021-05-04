@@ -130,12 +130,6 @@
     <Compile Include="satinalma.Designer.cs">
       <DependentUpon>satinalma.cs</DependentUpon>
     </Compile>
-    <Compile Include="satinalmadeneme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="satinalmadeneme.Designer.cs">
-      <DependentUpon>satinalmadeneme.cs</DependentUpon>
-    </Compile>
     <Compile Include="satinmesaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,9 +257,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="satinalma.resx">
       <DependentUpon>satinalma.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="satinalmadeneme.resx">
-      <DependentUpon>satinalmadeneme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="satinmesaj.resx">
       <DependentUpon>satinmesaj.cs</DependentUpon>
