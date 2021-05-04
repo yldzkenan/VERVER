@@ -15,7 +15,7 @@ namespace VeriTabanıProje
 {
     public partial class yenimüsteri : Form
     {
-        SqlConnection baglanti = new SqlConnection("Data Source=CANPC\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=True;MultipleActiveResultSets=True;");
+        SqlConnection baglanti = new SqlConnection("Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=True;MultipleActiveResultSets=True;");
         public yenimüsteri()
         {
             InitializeComponent();

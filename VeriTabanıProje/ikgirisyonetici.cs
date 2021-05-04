@@ -39,7 +39,7 @@ namespace VeriTabanıProje
 
             int sayac = 0;
             SqlConnection baglanti = new SqlConnection();
-            baglanti.ConnectionString = "Data Source=CANPC\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=SSPI;MultipleActiveResultSets=True";
+            baglanti.ConnectionString = "Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=SSPI;MultipleActiveResultSets=True";
             if (baglanti.State == ConnectionState.Open)
             {
                 baglanti.Close();

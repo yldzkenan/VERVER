@@ -43,7 +43,7 @@ namespace VeriTabanıProje
         {
             try
             {
-                baglanti = new SqlConnection("server =CANPC\\SQLEXPRESS; Initial Catalog = fabrikavt; Integrated Security = SSPI");
+                baglanti = new SqlConnection("server =USER11\\SQLEXPRESS; Initial Catalog = fabrikavt; Integrated Security = SSPI");
                 baglanti.Open();
                 da = new SqlDataAdapter("Select personel_id as 'Personel id',personel_ad as 'Personel ad',personel_soyad 'Personel soyad' from personel", baglanti);
                 DataTable tablo = new DataTable();
@@ -60,7 +60,7 @@ namespace VeriTabanıProje
         {
             try
             {
-                baglanti = new SqlConnection("server =CANPC\\SQLEXPRESS; Initial Catalog = fabrikavt; Integrated Security = SSPI");
+                baglanti = new SqlConnection("server =USER11\\SQLEXPRESS; Initial Catalog = fabrikavt; Integrated Security = SSPI");
                 baglanti.Open();
                 da = new SqlDataAdapter("Select * from departman", baglanti);
                 DataTable tablo = new DataTable();

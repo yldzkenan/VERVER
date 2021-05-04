@@ -16,7 +16,7 @@ namespace VeriTabanıProje
 {
     public partial class destek : Form
     {
-        SqlConnection baglanti = new SqlConnection("Data Source=CANPC\\SQLEXPRESS;Initial Catalog=fabrikadb;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikadb;Integrated Security=True");
         public destek()
         {
             InitializeComponent();

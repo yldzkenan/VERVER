@@ -14,7 +14,7 @@ namespace VeriTabanıProje
 {
     public partial class satinsifre : Form
     {
-        SqlConnection baglanti = new SqlConnection("Data Source=CANPC\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=True");
         public satinsifre()
         {
             InitializeComponent();

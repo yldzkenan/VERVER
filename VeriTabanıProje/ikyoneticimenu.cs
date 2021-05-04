@@ -25,7 +25,7 @@ namespace VeriTabanıProje
         {
             try
             {
-                baglanti = new SqlConnection("Data Source=CANPC\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=SSPI;MultipleActiveResultSets=True");
+                baglanti = new SqlConnection("Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=SSPI;MultipleActiveResultSets=True");
                 baglanti.Open();
                 /*use fabrikavt;
                 Select personel_id as ID,personel_ad as AD,personel_soyad as Soyad,personel_tel as TEL, personel_mail as Mail,
