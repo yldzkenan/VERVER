@@ -234,6 +234,12 @@
     <Compile Include="yonetim.Designer.cs">
       <DependentUpon>yonetim.cs</DependentUpon>
     </Compile>
+    <Compile Include="yonetimgiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetimgiris.Designer.cs">
+      <DependentUpon>yonetimgiris.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ikDepartmanislem.resx">
       <DependentUpon>ikDepartmanislem.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="yonetim.resx">
       <DependentUpon>yonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetimgiris.resx">
+      <DependentUpon>yonetimgiris.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
