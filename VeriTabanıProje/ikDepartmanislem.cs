@@ -311,8 +311,7 @@ namespace VeriTabanıProje
 
         private void label8_Click(object sender, EventArgs e)
         {
-            ikMenu ikMenu = new ikMenu();
-            ikMenu.Show();
+            
             this.Hide();
         }
     }

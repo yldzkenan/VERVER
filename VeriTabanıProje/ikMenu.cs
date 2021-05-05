@@ -21,14 +21,14 @@ namespace VeriTabanıProje
         {
            
             ikPersonelislem ikper = new ikPersonelislem();
-            ikper.Show(); this.Hide();
+            ikper.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
             ikDepartmanislem ikdep = new ikDepartmanislem();
-            ikdep.Show();this.Hide();
+            ikdep.Show();
         }
 
         private void btnGeri_Click(object sender, EventArgs e)

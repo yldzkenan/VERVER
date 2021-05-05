@@ -76,7 +76,6 @@ namespace VeriTabanıProje
         private void btnEkle_Click(object sender, EventArgs e)
         {
             ikMenu ikislem = new ikMenu();
-            this.Hide();
             ikislem.Show();
         }
 
@@ -103,6 +102,18 @@ namespace VeriTabanıProje
             kmc kmc = new kmc();
             kmc.Show();
             this.Hide();
+        }
+
+        private void btnPersonel_Click(object sender, EventArgs e)
+        {
+            ikPersonelislem ikpi = new ikPersonelislem();
+            ikpi.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ikDepartmanislem ikdi = new ikDepartmanislem();
+            ikdi.Show();
         }
     }
 }

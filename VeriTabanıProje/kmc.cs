@@ -67,7 +67,9 @@ namespace VeriTabanıProje
 
         private void button6_Click(object sender, EventArgs e)
         {
-           
+            yonetim yntm = new yonetim();
+            this.Hide();
+            yntm.Show();
         
         }
 

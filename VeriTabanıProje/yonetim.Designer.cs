@@ -55,6 +55,7 @@
             this.label7.Size = new System.Drawing.Size(20, 20);
             this.label7.TabIndex = 28;
             this.label7.Text = "X";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -67,6 +68,7 @@
             this.label8.Size = new System.Drawing.Size(18, 20);
             this.label8.TabIndex = 27;
             this.label8.Text = "<";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // button1
             // 
@@ -79,6 +81,7 @@
             this.button1.TabIndex = 26;
             this.button1.Text = "DEPARTMAN İŞLEMLERİ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnPersonel
             // 
@@ -91,6 +94,7 @@
             this.btnPersonel.TabIndex = 25;
             this.btnPersonel.Text = "PERSONEL İŞLEMLERİ";
             this.btnPersonel.UseVisualStyleBackColor = true;
+            this.btnPersonel.Click += new System.EventHandler(this.btnPersonel_Click);
             // 
             // button6
             // 
@@ -101,8 +105,9 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(85, 81);
             this.button6.TabIndex = 34;
-            this.button6.Text = "DEPARTMAN İŞLEMLERİ";
+            this.button6.Text = "MAAŞ VERİLERİ";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -113,7 +118,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(84, 81);
             this.button7.TabIndex = 33;
-            this.button7.Text = "MAAŞ İŞLEMLERİ";
+            this.button7.Text = "ZAM İŞLEMLERİ";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
