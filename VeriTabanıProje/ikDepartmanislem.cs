@@ -45,7 +45,7 @@ namespace VeriTabanıProje
             {
                 baglanti = new SqlConnection("server =USER11\\SQLEXPRESS; Initial Catalog = fabrikavt; Integrated Security = SSPI");
                 baglanti.Open();
-                da = new SqlDataAdapter("Select personel_id as 'Personel id',personel_ad as 'Personel ad',personel_soyad 'Personel soyad' from personel", baglanti);
+                da = new SqlDataAdapter("Select personel_id as 'Personel id',personel_ad as 'Personel ad',personel_soyad 'Personel soyad',departman.departman_ad from personel inner join departman on departman.departman_id=personel.departman_id", baglanti);
                 DataTable tablo = new DataTable();
                 da.Fill(tablo);
                 dataGridView2.DataSource = tablo;

@@ -216,6 +216,18 @@
     <Compile Include="yenitedarikci.Designer.cs">
       <DependentUpon>yenitedarikci.cs</DependentUpon>
     </Compile>
+    <Compile Include="yoneticimaaszam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yoneticimaaszam.Designer.cs">
+      <DependentUpon>yoneticimaaszam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetim.Designer.cs">
+      <DependentUpon>yonetim.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ikDepartmanislem.resx">
       <DependentUpon>ikDepartmanislem.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +320,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="yenitedarikci.resx">
       <DependentUpon>yenitedarikci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yoneticimaaszam.resx">
+      <DependentUpon>yoneticimaaszam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetim.resx">
+      <DependentUpon>yonetim.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -98,7 +98,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(151, 338);
+            this.button3.Location = new System.Drawing.Point(11, 353);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 30);
@@ -110,7 +110,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(134, 270);
+            this.button1.Location = new System.Drawing.Point(139, 258);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 30);
@@ -134,7 +134,7 @@
             // 
             this.hesapla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hesapla.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.hesapla.Location = new System.Drawing.Point(260, 307);
+            this.hesapla.Location = new System.Drawing.Point(139, 307);
             this.hesapla.Margin = new System.Windows.Forms.Padding(2);
             this.hesapla.Name = "hesapla";
             this.hesapla.Size = new System.Drawing.Size(108, 30);
@@ -208,7 +208,7 @@
             // 
             this.onayla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.onayla.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.onayla.Location = new System.Drawing.Point(22, 338);
+            this.onayla.Location = new System.Drawing.Point(11, 307);
             this.onayla.Margin = new System.Windows.Forms.Padding(2);
             this.onayla.Name = "onayla";
             this.onayla.Size = new System.Drawing.Size(108, 30);
@@ -263,7 +263,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(22, 282);
+            this.button2.Location = new System.Drawing.Point(11, 258);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 30);
@@ -332,12 +332,12 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(403, 232);
+            this.dataGridView2.Location = new System.Drawing.Point(288, 233);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(345, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(385, 150);
             this.dataGridView2.TabIndex = 86;
             // 
-            // satinalmadeneme
+            // satinalma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -370,7 +370,7 @@
             this.Controls.Add(this.stok);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "satinalmadeneme";
+            this.Name = "satinalma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "satinalmadeneme";
             this.Load += new System.EventHandler(this.satinalmadeneme_Load);
