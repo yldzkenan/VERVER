@@ -15,6 +15,8 @@ namespace VeriTabanıProje
     public partial class depogonderimteslim : Form
     {
         SqlConnection baglanti = new SqlConnection("Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=True;MultipleActiveResultSets=True;");
+        private bool mouseDown;
+        private Point lastLocation;
         public depogonderimteslim()
         {
             InitializeComponent();
@@ -77,6 +79,36 @@ namespace VeriTabanıProje
                 {
                     MessageBox.Show(excep.Message);
                 }
+            }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void depogonderimteslim_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void depogonderimteslim_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void depogonderimteslim_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                this.Update();
             }
         }
     }

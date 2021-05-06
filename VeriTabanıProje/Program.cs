@@ -16,7 +16,7 @@ namespace VeriTabanıProje
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new depogonderimteslim());
+            Application.Run(new depomenu());
         }
     }
 }

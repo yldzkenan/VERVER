@@ -58,6 +58,18 @@
     <Compile Include="depogonderimteslim.Designer.cs">
       <DependentUpon>depogonderimteslim.cs</DependentUpon>
     </Compile>
+    <Compile Include="depomenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="depomenu.Designer.cs">
+      <DependentUpon>depomenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="depostokdurum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="depostokdurum.Designer.cs">
+      <DependentUpon>depostokdurum.cs</DependentUpon>
+    </Compile>
     <Compile Include="ikDepartmanislem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +269,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="depogonderimteslim.resx">
       <DependentUpon>depogonderimteslim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="depomenu.resx">
+      <DependentUpon>depomenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="depostokdurum.resx">
+      <DependentUpon>depostokdurum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ikDepartmanislem.resx">
       <DependentUpon>ikDepartmanislem.cs</DependentUpon>
