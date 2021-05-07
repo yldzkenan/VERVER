@@ -64,11 +64,23 @@
     <Compile Include="depomenu.Designer.cs">
       <DependentUpon>depomenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="depomesaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="depomesaj.Designer.cs">
+      <DependentUpon>depomesaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="depostokdurum.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="depostokdurum.Designer.cs">
       <DependentUpon>depostokdurum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="depoyoneticimenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="depoyoneticimenu.Designer.cs">
+      <DependentUpon>depoyoneticimenu.cs</DependentUpon>
     </Compile>
     <Compile Include="ikDepartmanislem.cs">
       <SubType>Form</SubType>
@@ -273,8 +285,14 @@
     <EmbeddedResource Include="depomenu.resx">
       <DependentUpon>depomenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="depomesaj.resx">
+      <DependentUpon>depomesaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="depostokdurum.resx">
       <DependentUpon>depostokdurum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="depoyoneticimenu.resx">
+      <DependentUpon>depoyoneticimenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ikDepartmanislem.resx">
       <DependentUpon>ikDepartmanislem.cs</DependentUpon>

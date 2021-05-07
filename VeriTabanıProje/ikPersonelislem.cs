@@ -17,6 +17,8 @@ namespace VeriTabanıProje
         SqlConnection baglanti;
         SqlCommand komut;
         SqlDataAdapter da;
+        private bool mouseDown;
+        private Point lastLocation;
         public ikPersonelislem()
         {
             InitializeComponent();
@@ -52,16 +54,18 @@ namespace VeriTabanıProje
             {
                 baglanti = new SqlConnection("Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=SSPI;MultipleActiveResultSets=True");
                 baglanti.Open();
-                /*use fabrikavt;
-                Select personel_id as ID,personel_ad as AD,personel_soyad as Soyad,personel_tel as TEL, personel_mail as Mail,
-                    personel_cinsiyet as Cinsiyet,personel_dogumTarihi as 'Doğum Tarihi',personel_tc as TC,
-                    personel_girisTarihi as 'Giriş Tarih',personel_maas as Maaş,adres_id as Adres , departman.departman_ad from personel inner join departman on departman.departman_id = personel.departman_id where personel.departman_id in(select departman_id from departman where departman_ad != 'İnsan Kaynakları');*/
                 da = new SqlDataAdapter("Select personel_id as ID,personel_ad as AD,personel_soyad as Soyad,personel_tel as TEL, personel_mail as Mail," +
                     "personel_cinsiyet as Cinsiyet,personel_dogumTarihi as 'Doğum Tarihi',personel_tc as TC," +
                     "personel_girisTarihi as 'Giriş Tarih',personel_maas as Maaş,adres_id as Adres , departman.departman_ad from personel inner join departman on departman.departman_id=personel.departman_id ", baglanti);
                 DataTable tablo = new DataTable();
                 da.Fill(tablo);
                 dataGridView1.DataSource = tablo;
+
+                da = new SqlDataAdapter("select * from adres", baglanti);
+                DataTable tablo2 = new DataTable();
+                da.Fill(tablo2);
+                dataGridView2.DataSource = tablo2;
+
                 baglanti.Close();
             }
             catch (Exception excep)
@@ -110,17 +114,29 @@ namespace VeriTabanıProje
                 return null;
             }
         }
-            private void ikPersonelislem_Load(object sender, EventArgs e)
-            {
-                Combo();
-                PersonelGetir();
-            }
+        private void ikPersonelislem_Load(object sender, EventArgs e)
+        {
+            Combo();
+            PersonelGetir();
+            Temizle();
+        }
 
         private void textAra_TextChanged(object sender, EventArgs e)
         {
             Ara("Select personel_id as ID,personel_ad as Ad,personel_soyad as Soyad,personel_tel as TEL, personel_mail as Mail," +
                "personel_cinsiyet as Cinsiyet,personel_dogumTarihi as 'Doğum Tarihi',personel_tc as TC," +
                "personel_girisTarihi as 'Giriş Tarih',personel_maas as Maaş,adres_id as Adres , departman.departman_ad from personel inner join departman on departman.departman_id=personel.departman_id where personel_ad like'" + textAra.Text + "%'");
+        }
+
+        private void dataGridView2_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            textAdres.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            textil.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            textilce.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+            textmahalle.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            textsokak.Text = dataGridView2.CurrentRow.Cells[4].Value.ToString();
+            textno.Text = dataGridView2.CurrentRow.Cells[5].Value.ToString();
+            textdaire.Text = dataGridView2.CurrentRow.Cells[6].Value.ToString();
         }
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -219,23 +235,31 @@ namespace VeriTabanıProje
                     cmd.Parameters.AddWithValue("@dep", comboBox1.Text);
                     string a = Convert.ToString(cmd.ExecuteScalar());
 
-                    string sorgu2 = "select top 1 adres_id from adres order by adres_id desc";
-                    SqlCommand cmd2 = new SqlCommand(sorgu2, baglanti);
-                    int adres = Convert.ToInt32(cmd2.ExecuteScalar());
-                    adres = adres + 1;
 
-                    string sorgu3 = "insert into adres values(@id,@il,@ilce,@mahalle,@sokak,@no,@daire)";
-                    SqlCommand komut1 = new SqlCommand(sorgu3, baglanti);
-                    komut1.Parameters.AddWithValue("@id", adres);
-                    komut1.Parameters.AddWithValue("@il", textil.Text);
-                    komut1.Parameters.AddWithValue("@ilce", textilce.Text);
-                    komut1.Parameters.AddWithValue("@mahalle", textmahalle.Text);
-                    komut1.Parameters.AddWithValue("@sokak", textsokak.Text);
-                    komut1.Parameters.AddWithValue("@no", textno.Text);
-                    komut1.Parameters.AddWithValue("@daire", textdaire.Text);
-                    komut1.ExecuteNonQuery();
+                    int adres;
+                    if (string.IsNullOrEmpty(textAdres.Text))
+                    {
+                        string sorgu2 = "select top 1 adres_id from adres order by adres_id desc";
+                        SqlCommand cmd2 = new SqlCommand(sorgu2, baglanti);
+                        adres = Convert.ToInt32(cmd2.ExecuteScalar());
+                        adres = adres + 1;
 
-
+                        string sorgu3 = "insert into adres values(@id,@il,@ilce,@mahalle,@sokak,@no,@daire)";
+                        SqlCommand komut1 = new SqlCommand(sorgu3, baglanti);
+                        komut1.Parameters.AddWithValue("@id", adres);
+                        komut1.Parameters.AddWithValue("@il", textil.Text);
+                        komut1.Parameters.AddWithValue("@ilce", textilce.Text);
+                        komut1.Parameters.AddWithValue("@mahalle", textmahalle.Text);
+                        komut1.Parameters.AddWithValue("@sokak", textsokak.Text);
+                        komut1.Parameters.AddWithValue("@no", textno.Text);
+                        komut1.Parameters.AddWithValue("@daire", textdaire.Text);
+                        komut1.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        adres = Convert.ToInt32(textAdres.Text);
+                    }
+                    
 
                     string sorgu = "insert into personel values(@id,@ad,@soyad,@tel,@mail,@cinsiyet,@dt,@tc,@gt,@maas,@adres,@dep)";
                     komut = new SqlCommand(sorgu, baglanti);
@@ -270,25 +294,63 @@ namespace VeriTabanıProje
             }
             try
             {
+                string adres="";
                 baglanti.Open();
                 string sorgu1 = "select departman_id from departman where departman_ad=@dep";
                 SqlCommand cmd = new SqlCommand(sorgu1, baglanti);
                 cmd.Parameters.AddWithValue("@dep", comboBox1.Text);
                 string a = Convert.ToString(cmd.ExecuteScalar());
+                if (string.IsNullOrEmpty(textAdres.Text))
+                {
+                    string sorgu2 = "select top 1 adres_id from adres order by adres_id desc";
+                    SqlCommand cmd2 = new SqlCommand(sorgu2, baglanti);
+                    int adrs = Convert.ToInt32(cmd2.ExecuteScalar());
+                    adrs = adrs + 1;
 
-                string sorgu2 = "update adres set il=@il,ilce=@ilce,mahalle=@mahalle,sokak=@sokak,no=@no,daire=@daire where adres_id=@aid";
-                SqlCommand komut1 = new SqlCommand(sorgu2, baglanti);
-                komut1.Parameters.AddWithValue("@aid", Convert.ToInt32(textAdres.Text));
-                komut1.Parameters.AddWithValue("@il", textil.Text);
-                komut1.Parameters.AddWithValue("@ilce", textilce.Text);
-                komut1.Parameters.AddWithValue("@mahalle", textmahalle.Text);
-                komut1.Parameters.AddWithValue("@sokak", textsokak.Text);
-                komut1.Parameters.AddWithValue("@no", Convert.ToInt32(textno.Text));
-                komut1.Parameters.AddWithValue("@daire", textdaire.Text);
-                komut1.ExecuteNonQuery();
+                    string sorgu3 = "insert into adres values(@id,@il,@ilce,@mahalle,@sokak,@no,@daire)";
+                    SqlCommand komut1 = new SqlCommand(sorgu3, baglanti);
+                    komut1.Parameters.AddWithValue("@id", adrs);
+                    komut1.Parameters.AddWithValue("@il", textil.Text);
+                    komut1.Parameters.AddWithValue("@ilce", textilce.Text);
+                    komut1.Parameters.AddWithValue("@mahalle", textmahalle.Text);
+                    komut1.Parameters.AddWithValue("@sokak", textsokak.Text);
+                    komut1.Parameters.AddWithValue("@no", textno.Text);
+                    komut1.Parameters.AddWithValue("@daire", textdaire.Text);
+                    komut1.ExecuteNonQuery();
+                    adres = Convert.ToString(adrs);
+                    MessageBox.Show("Döngüde");
+                }
+                else
+                {
+                    string sorgu7 = "select adres_id from personel where personel_id=@perid";
+                    SqlCommand cmd7 = new SqlCommand(sorgu7, baglanti);
+                    cmd7.Parameters.AddWithValue("@perid", textId.Text);
+                    string k = Convert.ToString(cmd7.ExecuteScalar());
+
+                    if (Convert.ToInt32(k) != Convert.ToInt32(textAdres.Text))
+                    {
+                        adres = textAdres.Text;
+                    }
+                    else if (Convert.ToInt32(k) == Convert.ToInt32(textAdres.Text))
+                    {
+                        adres = k;
+                        string sorgu2 = "update adres set il=@il,ilce=@ilce,mahalle=@mahalle,sokak=@sokak,no=@no,daire=@daire where adres_id=@aid";
+                        SqlCommand komut1 = new SqlCommand(sorgu2, baglanti);
+                        komut1.Parameters.AddWithValue("@aid", adres);
+                        komut1.Parameters.AddWithValue("@il", textil.Text);
+                        komut1.Parameters.AddWithValue("@ilce", textilce.Text);
+                        komut1.Parameters.AddWithValue("@mahalle", textmahalle.Text);
+                        komut1.Parameters.AddWithValue("@sokak", textsokak.Text);
+                        komut1.Parameters.AddWithValue("@no", Convert.ToInt32(textno.Text));
+                        komut1.Parameters.AddWithValue("@daire", textdaire.Text);
+                        komut1.ExecuteNonQuery();
+
+                    }
+                }
+                 
 
                 string sorgu = "update personel set personel_id=@id,personel_ad=@ad,personel_soyad=@soyad,personel_tel=@tel,personel_mail=@mail,personel_cinsiyet=@cinsiyet,personel_dogumTarihi=@dt," +
-                    "personel_tc=@tc,personel_girisTarihi=@gt,personel_maas=@maas,departman_id=@dep where personel_id=@id";
+                    "personel_tc=@tc,personel_girisTarihi=@gt,personel_maas=@maas,departman_id=@dep,adres_id=@adres where personel_id=@id";
                 komut = new SqlCommand(sorgu, baglanti);
                 komut.Parameters.AddWithValue("@id", textId.Text);
                 komut.Parameters.AddWithValue("@ad", textAd.Text);
@@ -300,7 +362,7 @@ namespace VeriTabanıProje
                 komut.Parameters.AddWithValue("@tc", textTC.Text);
                 komut.Parameters.AddWithValue("@gt", Convert.ToDateTime(dateTimePickerGT.Text));
                 komut.Parameters.AddWithValue("@maas", Convert.ToDouble(textMaas.Text));
-                komut.Parameters.AddWithValue("@adres", textAdres.Text);
+                komut.Parameters.AddWithValue("@adres", adres);
                 komut.Parameters.AddWithValue("@dep", a);
                 komut.ExecuteNonQuery();
                 baglanti.Close();
@@ -405,6 +467,38 @@ namespace VeriTabanıProje
         {
             Application.Exit();
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textAdres.Text = null;
+            textdaire.Text = null;
+            textdaire.Text = null;
+            textil.Text = null;
+            textilce.Text = null;
+            textsokak.Text = null;
+            textmahalle.Text = null;
+            textno.Text = null;
+        }
+
+        private void ikPersonelislem_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void ikPersonelislem_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void ikPersonelislem_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                this.Update();
+            }
         }
     }
 }

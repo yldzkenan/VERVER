@@ -69,5 +69,10 @@ namespace VeriTabanıProje
             }
             
         }
+
+        private void depomenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

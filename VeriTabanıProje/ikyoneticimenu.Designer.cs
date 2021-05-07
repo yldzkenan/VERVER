@@ -39,8 +39,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnPersonel = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,19 +169,6 @@
             this.label7.Text = "X";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(189, 65);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 118);
-            this.button3.TabIndex = 56;
-            this.button3.Text = "DEPARTMAN İŞLEMLERİ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // btnPersonel
             // 
             this.btnPersonel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -194,6 +181,19 @@
             this.btnPersonel.Text = "PERSONEL İŞLEMLERİ";
             this.btnPersonel.UseVisualStyleBackColor = true;
             this.btnPersonel.Click += new System.EventHandler(this.btnPersonel_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(189, 65);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(99, 118);
+            this.button3.TabIndex = 56;
+            this.button3.Text = "DEPARTMAN İŞLEMLERİ";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // ikyoneticimenu
             // 
@@ -238,7 +238,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnPersonel;
+        private System.Windows.Forms.Button button3;
     }
 }

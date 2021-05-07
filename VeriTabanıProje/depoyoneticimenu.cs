@@ -10,14 +10,18 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 
+
 namespace VeriTabanıProje
 {
-    public partial class ikyoneticimenu : Form
+    
+    public partial class depoyoneticimenu : Form
     {
         SqlConnection baglanti;
         SqlCommand komut;
         SqlDataAdapter da;
-        public ikyoneticimenu()
+        private bool mouseDown;
+        private Point lastLocation;
+        public depoyoneticimenu()
         {
             InitializeComponent();
         }
@@ -29,7 +33,7 @@ namespace VeriTabanıProje
                 baglanti.Open();
                 da = new SqlDataAdapter("Select personel_id as ID,personel_ad as AD,personel_soyad as Soyad,personel_tel as TEL, personel_mail as Mail," +
                     "personel_cinsiyet as Cinsiyet,personel_dogumTarihi as 'Doğum Tarihi',personel_tc as TC," +
-                    "personel_girisTarihi as 'Giriş Tarih',personel_maas as Maaş,adres_id as Adres , departman.departman_ad from personel inner join departman on departman.departman_id=personel.departman_id where personel.departman_id in(select departman_id from departman where departman_ad='İnsan Kaynakları')", baglanti);
+                    "personel_girisTarihi as 'Giriş Tarih',personel_maas as Maaş,adres_id as Adres , departman.departman_ad from personel inner join departman on departman.departman_id=personel.departman_id where personel.departman_id in(select departman_id from departman where departman_ad='Depo')", baglanti);
                 DataTable tablo = new DataTable();
                 da.Fill(tablo);
                 dataGridView1.DataSource = tablo;
@@ -40,8 +44,25 @@ namespace VeriTabanıProje
                 MessageBox.Show(excep.Message);
             }
         }
+        private void btnstokdurum_Click(object sender, EventArgs e)
+        {
+            depostokdurum dsd = new depostokdurum();
+            dsd.Show();
+        }
 
-        private void ikyoneticimenu_Load(object sender, EventArgs e)
+        private void buttonKargo_Click(object sender, EventArgs e)
+        {
+            depogonderim dg = new depogonderim();
+            dg.Show();
+        }
+
+        private void buttonTeslim_Click(object sender, EventArgs e)
+        {
+            depogonderimteslim dgt = new depogonderimteslim();
+            dgt.Show();
+        }
+
+        private void depoyoneticimenu_Load(object sender, EventArgs e)
         {
             PersonelGetir();
 
@@ -57,28 +78,28 @@ namespace VeriTabanıProje
                 string a = Convert.ToString(komut.ExecuteScalar());
                 labelkayitlipersonel.Text = a;
 
-                string sorgu2 = "Select count(departman_id) from departman";
+                string sorgu2 = "Select count(gonderi_id) from gonderi";
                 SqlCommand komut2 = new SqlCommand(sorgu2, baglanti);
                 string b = Convert.ToString(komut2.ExecuteScalar());
-                labeldepartmansayisi.Text = b;
+                labelislem.Text = b;
+
+                string sorgu3 = "Select count(satis_id) from satis";
+                SqlCommand komut3 = new SqlCommand(sorgu3, baglanti);
+                string c = Convert.ToString(komut3.ExecuteScalar());
+                int bekleyen = Convert.ToInt32(c) - Convert.ToInt32(b);
+                labelbekleyen.Text = bekleyen.ToString();
                 baglanti.Close();
             }
-            catch(Exception excep)
+            catch (Exception excep)
             {
                 MessageBox.Show(excep.Message);
             }
         }
 
-        private void btnEkle_Click(object sender, EventArgs e)
-        {
-            ikMenu ikislem = new ikMenu();
-            ikislem.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            ikmesaj ikmesaj = new ikmesaj();
-            ikmesaj.Show();
+            depomesaj dm = new depomesaj();
+            dm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -87,29 +108,24 @@ namespace VeriTabanıProje
             istek.Show();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void depoyoneticimenu_MouseUp(object sender, MouseEventArgs e)
         {
-            Application.Exit();
-            this.Close();
+            mouseDown = false;
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void depoyoneticimenu_MouseDown(object sender, MouseEventArgs e)
         {
-            kmc kmc = new kmc();
-            kmc.Show();
-            this.Hide();
+            mouseDown = true;
+            lastLocation = e.Location;
         }
 
-        private void btnPersonel_Click(object sender, EventArgs e)
+        private void depoyoneticimenu_MouseMove(object sender, MouseEventArgs e)
         {
-            ikPersonelislem ikpi = new ikPersonelislem();
-            ikpi.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            ikDepartmanislem ikdi = new ikDepartmanislem();
-            ikdi.Show();
+            if (mouseDown)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                this.Update();
+            }
         }
     }
 }
