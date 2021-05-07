@@ -66,9 +66,10 @@ namespace VeriTabanıProje
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(9, 150);
+            this.label2.Location = new System.Drawing.Point(7, 122);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 17);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Stok :";
             // 
@@ -76,18 +77,20 @@ namespace VeriTabanıProje
             // 
             this.stok.Enabled = false;
             this.stok.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.stok.Location = new System.Drawing.Point(159, 150);
+            this.stok.Location = new System.Drawing.Point(119, 122);
+            this.stok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.stok.Name = "stok";
-            this.stok.Size = new System.Drawing.Size(177, 22);
+            this.stok.Size = new System.Drawing.Size(134, 20);
             this.stok.TabIndex = 3;
             // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(12, 297);
+            this.button2.Location = new System.Drawing.Point(9, 241);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 37);
+            this.button2.Size = new System.Drawing.Size(108, 30);
             this.button2.TabIndex = 7;
             this.button2.Text = "Yeni Sipariş";
             this.button2.UseVisualStyleBackColor = true;
@@ -98,9 +101,10 @@ namespace VeriTabanıProje
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(887, 4);
+            this.label5.Location = new System.Drawing.Point(665, 3);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 25);
+            this.label5.Size = new System.Drawing.Size(20, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "X";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -109,9 +113,10 @@ namespace VeriTabanıProje
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(10, 90);
+            this.label6.Location = new System.Drawing.Point(8, 73);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 17);
+            this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Müşteri :";
             // 
@@ -120,9 +125,10 @@ namespace VeriTabanıProje
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(864, 4);
+            this.label7.Location = new System.Drawing.Point(648, 3);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 25);
+            this.label7.Size = new System.Drawing.Size(18, 20);
             this.label7.TabIndex = 13;
             this.label7.Text = "<";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -130,26 +136,29 @@ namespace VeriTabanıProje
             // mustericombo
             // 
             this.mustericombo.FormattingEnabled = true;
-            this.mustericombo.Location = new System.Drawing.Point(159, 90);
+            this.mustericombo.Location = new System.Drawing.Point(119, 73);
+            this.mustericombo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mustericombo.Name = "mustericombo";
-            this.mustericombo.Size = new System.Drawing.Size(177, 24);
+            this.mustericombo.Size = new System.Drawing.Size(134, 21);
             this.mustericombo.TabIndex = 14;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(10, 178);
+            this.label3.Location = new System.Drawing.Point(8, 145);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 17);
+            this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 17;
             this.label3.Text = "Miktar :";
             // 
             // miktar
             // 
-            this.miktar.Location = new System.Drawing.Point(159, 178);
+            this.miktar.Location = new System.Drawing.Point(119, 145);
+            this.miktar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.miktar.Name = "miktar";
-            this.miktar.Size = new System.Drawing.Size(177, 22);
+            this.miktar.Size = new System.Drawing.Size(134, 20);
             this.miktar.TabIndex = 18;
             this.miktar.TextChanged += new System.EventHandler(this.miktar_TextChanged);
             // 
@@ -157,9 +166,10 @@ namespace VeriTabanıProje
             // 
             this.onayla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.onayla.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.onayla.Location = new System.Drawing.Point(192, 297);
+            this.onayla.Location = new System.Drawing.Point(144, 241);
+            this.onayla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.onayla.Name = "onayla";
-            this.onayla.Size = new System.Drawing.Size(144, 37);
+            this.onayla.Size = new System.Drawing.Size(108, 30);
             this.onayla.TabIndex = 19;
             this.onayla.Text = "Onayla";
             this.onayla.UseVisualStyleBackColor = true;
@@ -169,9 +179,10 @@ namespace VeriTabanıProje
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(9, 234);
+            this.label4.Location = new System.Drawing.Point(7, 190);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 17);
+            this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 20;
             this.label4.Text = "Kalan Stok :";
             // 
@@ -179,9 +190,10 @@ namespace VeriTabanıProje
             // 
             this.urun_miktar.Enabled = false;
             this.urun_miktar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.urun_miktar.Location = new System.Drawing.Point(159, 234);
+            this.urun_miktar.Location = new System.Drawing.Point(119, 190);
+            this.urun_miktar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.urun_miktar.Name = "urun_miktar";
-            this.urun_miktar.Size = new System.Drawing.Size(177, 22);
+            this.urun_miktar.Size = new System.Drawing.Size(134, 20);
             this.urun_miktar.TabIndex = 21;
             this.urun_miktar.TextChanged += new System.EventHandler(this.kalanstok_TextChanged);
             // 
@@ -189,27 +201,30 @@ namespace VeriTabanıProje
             // 
             this.toplamfiyat.Enabled = false;
             this.toplamfiyat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.toplamfiyat.Location = new System.Drawing.Point(159, 262);
+            this.toplamfiyat.Location = new System.Drawing.Point(119, 213);
+            this.toplamfiyat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.toplamfiyat.Name = "toplamfiyat";
-            this.toplamfiyat.Size = new System.Drawing.Size(177, 22);
+            this.toplamfiyat.Size = new System.Drawing.Size(134, 20);
             this.toplamfiyat.TabIndex = 23;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(9, 262);
+            this.label8.Location = new System.Drawing.Point(7, 213);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 17);
+            this.label8.Size = new System.Drawing.Size(76, 13);
             this.label8.TabIndex = 22;
             this.label8.Text = "Toplam Tutar :";
             // 
             // birimfiyat
             // 
             this.birimfiyat.Enabled = false;
-            this.birimfiyat.Location = new System.Drawing.Point(159, 206);
+            this.birimfiyat.Location = new System.Drawing.Point(119, 167);
+            this.birimfiyat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.birimfiyat.Name = "birimfiyat";
-            this.birimfiyat.Size = new System.Drawing.Size(177, 22);
+            this.birimfiyat.Size = new System.Drawing.Size(134, 20);
             this.birimfiyat.TabIndex = 25;
             this.birimfiyat.TextChanged += new System.EventHandler(this.birimfiyat_TextChanged);
             // 
@@ -217,9 +232,10 @@ namespace VeriTabanıProje
             // 
             this.labelbirim.AutoSize = true;
             this.labelbirim.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelbirim.Location = new System.Drawing.Point(9, 206);
+            this.labelbirim.Location = new System.Drawing.Point(7, 167);
+            this.labelbirim.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelbirim.Name = "labelbirim";
-            this.labelbirim.Size = new System.Drawing.Size(81, 17);
+            this.labelbirim.Size = new System.Drawing.Size(60, 13);
             this.labelbirim.TabIndex = 24;
             this.labelbirim.Text = "Birim Fiyat :";
             // 
@@ -228,9 +244,10 @@ namespace VeriTabanıProje
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(835, 0);
+            this.label9.Location = new System.Drawing.Point(626, 0);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 25);
+            this.label9.Size = new System.Drawing.Size(18, 20);
             this.label9.TabIndex = 27;
             this.label9.Text = "_";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -239,9 +256,10 @@ namespace VeriTabanıProje
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(12, 340);
+            this.button1.Location = new System.Drawing.Point(9, 276);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 37);
+            this.button1.Size = new System.Drawing.Size(108, 30);
             this.button1.TabIndex = 28;
             this.button1.Text = "Gelen Mesaj";
             this.button1.UseVisualStyleBackColor = true;
@@ -251,9 +269,10 @@ namespace VeriTabanıProje
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(192, 340);
+            this.button3.Location = new System.Drawing.Point(144, 276);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 37);
+            this.button3.Size = new System.Drawing.Size(108, 30);
             this.button3.TabIndex = 29;
             this.button3.Text = "Yeni Mesaj";
             this.button3.UseVisualStyleBackColor = true;
@@ -263,18 +282,20 @@ namespace VeriTabanıProje
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(9, 120);
+            this.label1.Location = new System.Drawing.Point(7, 98);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ürün :";
             // 
             // uruncombo
             // 
             this.uruncombo.FormattingEnabled = true;
-            this.uruncombo.Location = new System.Drawing.Point(159, 120);
+            this.uruncombo.Location = new System.Drawing.Point(119, 98);
+            this.uruncombo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uruncombo.Name = "uruncombo";
-            this.uruncombo.Size = new System.Drawing.Size(177, 24);
+            this.uruncombo.Size = new System.Drawing.Size(134, 21);
             this.uruncombo.TabIndex = 15;
             this.uruncombo.SelectedIndexChanged += new System.EventHandler(this.uruncombo_SelectedIndexChanged);
             this.uruncombo.SelectedValueChanged += new System.EventHandler(this.uruncombo_SelectedValueChanged);
@@ -282,55 +303,61 @@ namespace VeriTabanıProje
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(355, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(266, 26);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(558, 163);
+            this.dataGridView1.Size = new System.Drawing.Size(418, 132);
             this.dataGridView1.TabIndex = 30;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(352, 7);
+            this.label10.Location = new System.Drawing.Point(264, 6);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 17);
+            this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 31;
             this.label10.Text = "Tarih :";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(407, 4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(305, 3);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 33;
             // 
             // satis_id
             // 
             this.satis_id.Enabled = false;
             this.satis_id.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.satis_id.Location = new System.Drawing.Point(159, 32);
+            this.satis_id.Location = new System.Drawing.Point(119, 26);
+            this.satis_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.satis_id.Name = "satis_id";
-            this.satis_id.Size = new System.Drawing.Size(177, 22);
+            this.satis_id.Size = new System.Drawing.Size(134, 20);
             this.satis_id.TabIndex = 35;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(10, 32);
+            this.label11.Location = new System.Drawing.Point(8, 26);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 17);
+            this.label11.Size = new System.Drawing.Size(36, 13);
             this.label11.TabIndex = 34;
             this.label11.Text = "Satış :";
             // 
             // personelcombo
             // 
             this.personelcombo.FormattingEnabled = true;
-            this.personelcombo.Location = new System.Drawing.Point(159, 60);
+            this.personelcombo.Location = new System.Drawing.Point(119, 49);
+            this.personelcombo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.personelcombo.Name = "personelcombo";
-            this.personelcombo.Size = new System.Drawing.Size(177, 24);
+            this.personelcombo.Size = new System.Drawing.Size(134, 21);
             this.personelcombo.TabIndex = 36;
             this.personelcombo.SelectedIndexChanged += new System.EventHandler(this.personelcombo_SelectedIndexChanged);
             // 
@@ -338,28 +365,30 @@ namespace VeriTabanıProje
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(9, 60);
+            this.label12.Location = new System.Drawing.Point(7, 49);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 17);
+            this.label12.Size = new System.Drawing.Size(54, 13);
             this.label12.TabIndex = 37;
             this.label12.Text = "Personel :";
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(356, 206);
+            this.dataGridView2.Location = new System.Drawing.Point(267, 167);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(558, 171);
+            this.dataGridView2.Size = new System.Drawing.Size(418, 139);
             this.dataGridView2.TabIndex = 38;
             // 
             // siparis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(926, 399);
+            this.ClientSize = new System.Drawing.Size(694, 324);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.personelcombo);
@@ -390,6 +419,7 @@ namespace VeriTabanıProje
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "siparis";
             this.Text = "kayitlimüsteri";
             this.Load += new System.EventHandler(this.kayitlimüsteri_Load);

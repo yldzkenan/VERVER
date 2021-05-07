@@ -82,6 +82,12 @@
     <Compile Include="depoyoneticimenu.Designer.cs">
       <DependentUpon>depoyoneticimenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="hammaddeekleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hammaddeekleme.Designer.cs">
+      <DependentUpon>hammaddeekleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="ikDepartmanislem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,12 @@
     <Compile Include="satışsecim.Designer.cs">
       <DependentUpon>satışsecim.cs</DependentUpon>
     </Compile>
+    <Compile Include="uretim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uretim.Designer.cs">
+      <DependentUpon>uretim.cs</DependentUpon>
+    </Compile>
     <Compile Include="yenimüsteri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="depoyoneticimenu.resx">
       <DependentUpon>depoyoneticimenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hammaddeekleme.resx">
+      <DependentUpon>hammaddeekleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ikDepartmanislem.resx">
       <DependentUpon>ikDepartmanislem.cs</DependentUpon>
@@ -380,6 +395,9 @@
     </Compile>
     <EmbeddedResource Include="satışsecim.resx">
       <DependentUpon>satışsecim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uretim.resx">
+      <DependentUpon>uretim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="yenimüsteri.resx">
       <DependentUpon>yenimüsteri.cs</DependentUpon>
